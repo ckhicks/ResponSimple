@@ -12,19 +12,100 @@ Tags: HTML5, Mobile First, Responsive, Grid, HTML5 Boilerplate, HTML5 Reset, Twi
 Template: ResponSimple_v16
 */
 
+/* Do Not Remove */
 @import url("../ResponSimple_v16/style.css");
 
+
+
+/* @group Main Layout */
+
+/* header-span12 */
+.header {
+	margin-top: 18px; }
+
+.nav li {
+	display: inline-block; }
+	.nav li.span {}
+
+/* portolio-span6 */
+#homePortfolio {
+	margin-bottom: 18px; }
+	#homePortfolio div > [class*="span"] {
+		background: #333; }
+		#homePortfolio > img {
+			max-width: 100%;
+			max-height: 100%;
+			display: block }
+
+/* articles-span6 */
+#homeArticles > article {
+	display: block;
+	margin-bottom: 9px; }
+	#homeArticles > article h3 {
+		font-weight: 700; }
+	#homeArticles > article p {
+		margin: 0; }
+	#homeArticles > article:last-child {
+		margin-bottom: 0; }
+
+/* @end */
+
+
+
+/* @group < 755 */
+
 @media (max-width:755px) {
+	smScr {
+		display: block; }
+	lgScr {
+		display: none; }
+	h2 {
+		text-align: center; }
+	 #homePortfolio div:nth-child(1) {
+		margin-bottom: 9px; }
+	#homePhotography {
+		
+	}
 }
+
+/* @end */
+
+
+
+/* @group > 480 and < 755 */
 
 @media (min-width:480px) and (max-width:755px) {
 }
 
+/* @end */
+
+
+
+/* @group > 756 */
+
 @media (min-width:756px) {
+	smScr {
+		display: none; }
+	lgScr {
+		display: block; }
 }
+
+/* @end */
+
+
+
+/* @group > 978 */
 
 @media (min-width:978px) {
 }
 
+/* @end */
+
+
+
+/* @group > 1200 */
+
 @media (min-width:1200px){
 }
+
+/* @end */
