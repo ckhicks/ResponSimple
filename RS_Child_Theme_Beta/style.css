@@ -1,0 +1,30 @@
+/* @override 
+	http://ckhicks.com/v16/wp-content/themes/mysite_v16_responsimplechild/style.css */
+
+/*
+Theme Name: ResponSimple Child
+Theme URI: http://ckhicks.com/responsimple
+Author: CK Hicks
+Author URI: http://ckhicks.com/
+Description: mysite (more later)
+Version: 16
+Tags: HTML5, Mobile First, Responsive, Grid, HTML5 Boilerplate, HTML5 Reset, Twitter Bootstrap
+Template: ResponSimple_v16
+*/
+
+@import url("../ResponSimple_v16/style.css");
+
+@media (max-width:755px) {
+}
+
+@media (min-width:480px) and (max-width:755px) {
+}
+
+@media (min-width:756px) {
+}
+
+@media (min-width:978px) {
+}
+
+@media (min-width:1200px){
+}
