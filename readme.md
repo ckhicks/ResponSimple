@@ -1,0 +1,1 @@
+Welcome to ResponSimple, a responsive and simplistic approach to WordPress themes. I'm still adding a lot of information and tweaks, but this first release of v17 is fairly extensive. Take some time to examine the code and [contact me](mailto:contact@ckhicks.com "Email CK Hicks") if you need anything.
