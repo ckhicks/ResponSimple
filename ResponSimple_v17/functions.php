@@ -15,7 +15,7 @@
  *
  * @package WordPress
  * @subpackage ResponSimple
- * @since ResponSimple 1.6
+ * @since ResponSimple 1.7
  */
 
 //

@@ -2,12 +2,12 @@
 /**
  * @package WordPress
  * @subpackage ResponSimple
- * @since ResponSimple 1.6
+ * @since ResponSimple 1.7
  */
 
 get_header(); ?>
 
-	<section role="content">
+	<section role="content" class="clearfix">
 
 		<div class="row">
 
