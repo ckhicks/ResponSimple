@@ -27,6 +27,14 @@
 	add_filter('excerpt_length', 'new_excerpt_length');
 	function new_excerpt_more($more) { return '...'; }
 	add_filter('excerpt_more', 'new_excerpt_more');
+
+//
+//  Options Framework
+//
+if ( !function_exists( 'optionsframework_init' ) ) {
+	define( 'OPTIONS_FRAMEWORK_DIRECTORY', get_template_directory_uri() . '/inc/' );
+	require_once dirname( __FILE__ ) . '/inc/options-framework.php';
+}
 	
 //
 //  Shortcodes
@@ -45,7 +53,7 @@
 
 		register_sidebar( array(
 			'name' => __( 'Sidebar', 'responsimple' ),
-			'id' => 'sidebar-home1',
+			'id' => 'sidebar-home-1',
 			'before_widget' => '<li id="%1$s" class="widget %2$s">',
 			'after_widget' => "</li>",
 			'before_title' => '<h4 class="widget-title">',

@@ -99,7 +99,8 @@ Tags: HTML5, Mobile + Content First, Responsive, Golden Grid, HTML5 Reset, Found
     font-size: 1em;
   }
   .header,
-  .content {
+  .content,
+  .footer {
     margin: 0 16.666666666666664%;
   }
 }
@@ -119,7 +120,8 @@ Tags: HTML5, Mobile + Content First, Responsive, Golden Grid, HTML5 Reset, Found
     font-size: 1em;
   }
   .header,
-  .content {
+  .content,
+  .footer {
     margin: 0 27.77777777777778%;
   }
 }
