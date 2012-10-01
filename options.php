@@ -27,29 +27,6 @@ function optionsframework_option_name() {
 
 function optionsframework_options() {
 
-	// Pull all the categories into an array
-	$options_categories = array();
-	$options_categories_obj = get_categories();
-	foreach ($options_categories_obj as $category) {
-		$options_categories[$category->cat_ID] = $category->cat_name;
-	}
-	
-	// Pull all tags into an array
-	$options_tags = array();
-	$options_tags_obj = get_tags();
-	foreach ( $options_tags_obj as $tag ) {
-		$options_tags[$tag->term_id] = $tag->name;
-	}
-
-
-	// Pull all the pages into an array
-	$options_pages = array();
-	$options_pages_obj = get_pages('sort_column=post_parent,menu_order');
-	$options_pages[''] = 'Select a page:';
-	foreach ($options_pages_obj as $page) {
-		$options_pages[$page->ID] = $page->post_title;
-	}
-
 $options = array();
 	
 //	General Settings
@@ -69,5 +46,7 @@ $options = array();
 		'id' => 'google',
 		'std' => 'UA-XXXXXXX-X',
 		'type' => 'text');
+
+return $options;
 
 }
