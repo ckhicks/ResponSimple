@@ -5,7 +5,7 @@
  * @since ResponSimple 1.7
  */
 ?><!doctype html>
-<?php require(''.get_stylesheet_directory().'/ua-parser/php/UAParser.php'); $result = UA::parse(); if ($result->isMobile) { $ua = 'mobile'; } else { $ua = 'other'; } ?>
+<?php //require(''.get_stylesheet_directory().'/ua-parser/php/UAParser.php'); $result = UA::parse(); if ($result->isMobile) { $ua = 'mobile'; } else { $ua = 'other'; } ?>
 <!--[if lt IE 9]><html class="no-js ie" data-template-set="ResponSimple" dir="ltr" xmlns:og="opengraphprotocol.org/schema/" <?php language_attributes(); ?>><![endif]-->
 <!--[if gte IE 9]><!--><html data-template-set="ResponSimple" dir="ltr" xmlns:og="http://opengraphprotocol.org/schema/" <?php language_attributes(); ?>><!--<![endif]-->
 <head>
@@ -35,7 +35,7 @@
 
 <script src="<?php bloginfo( 'template_url' ); ?>/js/modernizr.js"></script>
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-<?php if ($ua == 'other') { ?><link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>/servetherest.css" /><?php } ?>
+<?php //if ($ua == 'other') { ?><link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>/servetherest.css" /><?php //} ?>
 <!--[if lt IE 9]>
 <script src="//ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
