@@ -64,7 +64,7 @@
 	<header role="header" class="header row clearfix">
 		<div class="four columns">
 			<hgroup>
-				<h1 id="site-title"><a href="<?php echo esc_url( home_url('/') ); ?>" title="<?php echo esc_attr(get_bloginfo('name','display')); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<h1 id="site-title"><a href="<?php echo esc_url( home_url('/') ); ?>" title="<?php echo esc_attr(get_bloginfo('name','display')); ?>" rel="home"><?php $headerimg = of_get_option('header_image'); if ('' == $headerimg) { bloginfo( 'name' ); } else { ?><img src="<?php echo of_get_option('header_image'); ?>" title="<?php echo esc_attr(get_bloginfo('name','display')); echo ' || '; echo esc_attr(get_bloginfo('description','display')); ?>" alt="<?php echo esc_attr(get_bloginfo('name','display')); echo ' || '; echo esc_attr(get_bloginfo('description','display')); ?>" /><?php } ?></a></h1>
 			</hgroup>
 		</div>
 		<div class="four columns">
