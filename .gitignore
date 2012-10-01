@@ -1,3 +1,8 @@
 ResponSimple_v17.esproj
 .DS_Store
 .esproj
+ResponSimple_v17/ResponSimple_v17.esproj/user.ckhicks.espressostorage
+
+*.espressostorage
+
+.gitignore
