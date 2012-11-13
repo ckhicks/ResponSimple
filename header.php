@@ -5,7 +5,7 @@
  * @since ResponSimple 1.7
  */
 ?><!doctype html>
-<?php //require(''.get_stylesheet_directory().'/ua-parser/php/UAParser.php'); $result = UA::parse(); if ($result->isMobile) { $ua = 'mobile'; } else { $ua = 'other'; } ?>
+<?php $root = get_stylesheet_directory(); define('__DIR__', $root); require(''.$root.'/ua-parser/php/UAParser.php'); $result = UA::parse(); if ($result->isMobile) { $ua = 'mobile'; } elseif ($result->isTablet) { $ua = 'tablet'; } else { $ua = 'other'; } ?>
 <!--[if lt IE 9]><html class="no-js ie" data-template-set="ResponSimple" dir="ltr" xmlns:og="opengraphprotocol.org/schema/" <?php language_attributes(); ?>><![endif]-->
 <!--[if gte IE 9]><!--><html data-template-set="ResponSimple" dir="ltr" xmlns:og="http://opengraphprotocol.org/schema/" <?php language_attributes(); ?>><!--<![endif]-->
 <head>
@@ -25,7 +25,7 @@
 	?></title>
 	
 <meta name="title" content="<?php bloginfo('name'); ?>">
-<meta name="keywords" content="" />
+<meta name="keywords" content="<?php echo of_get_option('keywords'); ?>" />
 <meta name="description" content="<?php bloginfo('description'); ?>">
 <meta name="author" content="<?php bloginfo('name'); ?>">
 <meta name="Copyright" content="Copyright <?php echo date('Y'); ?> <?php bloginfo('name'); ?> All Rights Reserved.">
@@ -35,11 +35,7 @@
 
 <script src="<?php bloginfo( 'template_url' ); ?>/js/modernizr.js"></script>
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-<?php //if ($ua == 'other') { ?><link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>/servetherest.css" /><?php //} ?>
-<!--[if lt IE 9]>
-<script src="//ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
-<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
+<?php if ($ua != 'mobile') { ?><link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>/servetherest.css" /><?php } ?>
 
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <?php
@@ -51,7 +47,7 @@
 
 <?php $google = of_get_option('google'); if ('' == $google) {} else { ?>
 <script>
-	var _gaq=[['_setAccount','<?php echo of_get_option('google'); ?>'],['_trackPageview']]; // Change UA-XXXXX-X to be your site's ID
+	var _gaq=[['_setAccount','<?php echo of_get_option('google'); ?>'],['_trackPageview']];
 	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
 	g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
 	s.parentNode.insertBefore(g,s)}(document,'script'));

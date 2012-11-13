@@ -47,6 +47,13 @@ $options = array();
 		'std' => 'UA-XXXXXXX-X',
 		'type' => 'text');
 
+	$options[] = array(
+		'name' => __('Site Keywords', 'responsimple'),
+		'desc' => __('Insert keywords for your default meta tags.', 'responsimple'),
+		'id' => 'keywords',
+		'std' => '',
+		'type' => 'textarea');
+
 return $options;
 
 }
