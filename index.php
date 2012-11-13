@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-	<section id="" class="clearfix">
+	<section role="content" id="" class="clearfix">
 		<article class="row">
 			<header>
 				<h2 class="eight columns"><a href="" title="">title</a></h2>

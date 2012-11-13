@@ -5,7 +5,7 @@
  * @since ResponSimple 1.7
  */
 ?><!doctype html>
-<?php $root = get_stylesheet_directory(); define('__DIR__', $root); require(''.$root.'/ua-parser/php/UAParser.php'); $result = UA::parse(); if ($result->isMobile) { $ua = 'mobile'; } elseif ($result->isTablet) { $ua = 'tablet'; } else { $ua = 'other'; } ?>
+<?php $root_base = get_stylesheet_directory(); $root = (''.$root_base.'/ua-parser/php'); define('__DIR__', $root); require(''.$root.'/UAParser.php'); $result = UA::parse(); if ($result->isMobile) { $ua = 'mobile'; } elseif ($result->isTablet) { $ua = 'tablet'; } else { $ua = 'other'; } ?>
 <!--[if lt IE 9]><html class="no-js ie" data-template-set="ResponSimple" dir="ltr" xmlns:og="opengraphprotocol.org/schema/" <?php language_attributes(); ?>><![endif]-->
 <!--[if gte IE 9]><!--><html data-template-set="ResponSimple" dir="ltr" xmlns:og="http://opengraphprotocol.org/schema/" <?php language_attributes(); ?>><!--<![endif]-->
 <head>
