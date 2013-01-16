@@ -7,9 +7,9 @@
 
 get_header(); ?>
 
-	<section role="content" class="clearfix">
+	<section role="content" class="row clearfix">
 
-		<article class="row">
+		<article class="eight columns">
 
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 

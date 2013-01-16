@@ -8,11 +8,9 @@
 
 </div>
 
-<footer class="footer" class="clearfix">
-	<div class="row">
-		<div class="copyright clearfix">
-			<?php dynamic_sidebar('sidebar-footer'); ?>
-		</div>
+<footer id="footer" class="row clearfix">
+	<div class="copyright clearfix">
+		<?php dynamic_sidebar('sidebar-footer'); ?>
 	</div>
 </footer>
 

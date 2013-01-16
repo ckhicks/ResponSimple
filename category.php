@@ -7,9 +7,7 @@
 
 get_header(); ?>
 
-	<section role="content" class="clearfix">
-
-		<div class="row">
+	<section role="content" class="row clearfix">
 
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	
@@ -87,8 +85,6 @@ get_header(); ?>
 			</article><!-- #post-<?php the_ID(); ?> -->
 			
 			<?php endwhile; endif; ?>
-	
-		</div>
 	
 	</section>
 

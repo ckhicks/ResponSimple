@@ -7,18 +7,24 @@
 
 get_header(); ?>
 
-	<section role="content" id="" class="clearfix">
-		<article class="row">
+	<section role="content" id="" class="row clearfix">
+
+		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+		<article class="eight columns">
 			<header>
-				<h2 class="eight columns"><a href="" title="">title</a></h2>
+				<h2><a href="" title="">title</a></h2>
 			</header>
-			<div class="eight columns">
+			<div>
 				<p>article</p>
 			</div>
-			<footer class="eight columns">
+			<footer>
 				date, etc.
 			</footer>
 		</article>
+
+		<?php endwhile;  endif; ?>
+
 	</section>
 
 <?php get_footer(); ?>

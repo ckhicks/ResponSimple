@@ -35,7 +35,6 @@
 
 <script src="<?php bloginfo( 'template_url' ); ?>/js/modernizr.js"></script>
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-<?php if ($ua != 'mobile') { ?><link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>/servetherest.css" /><?php } ?>
 
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <?php
@@ -57,7 +56,7 @@
 <body <?php body_class(); ?>>
   <!--[if lt IE 8]><p class="chromeframe">Your browser is too outdated and insecure to display this website. <a href="browsehappy.com/">Please upgrade to a different browser</a> or <a href="google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this secure content.</p><![endif]-->
 
-	<header role="header" class="header row clearfix">
+	<header role="header" id="header" class="row clearfix">
 		<div class="four columns">
 			<hgroup>
 				<h1 id="site-title"><a href="<?php echo esc_url( home_url('/') ); ?>" title="<?php echo esc_attr(get_bloginfo('name','display')); ?>" rel="home"><?php $headerimg = of_get_option('header_image'); if ('' == $headerimg) { bloginfo( 'name' ); } else { ?><img src="<?php echo of_get_option('header_image'); ?>" title="<?php echo esc_attr(get_bloginfo('name','display')); echo ' || '; echo esc_attr(get_bloginfo('description','display')); ?>" alt="<?php echo esc_attr(get_bloginfo('name','display')); echo ' || '; echo esc_attr(get_bloginfo('description','display')); ?>" /><?php } ?></a></h1>
@@ -70,4 +69,4 @@
 		</div>
 	</header>
 
-<div class="content">
+<div id="content">
