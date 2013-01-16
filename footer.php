@@ -9,8 +9,8 @@
 </div>
 
 <footer id="footer" class="row clearfix">
-	<div class="copyright clearfix">
-		<?php dynamic_sidebar('sidebar-footer'); ?>
+	<div class="eight columns">
+		
 	</div>
 </footer>
 

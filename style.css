@@ -412,8 +412,6 @@ h3 {
 .content-fluid:before,.content-fluid:after{display:table;content:"";}
 .content-fluid:after{clear:both;}
 
-/* @end */
-
 @media print {
   * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } 
   a, a:visited { text-decoration: underline; }
@@ -428,3 +426,5 @@ h3 {
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
 }
+
+/* @end */
