@@ -7,23 +7,27 @@
 
 get_header(); ?>
 
-	<section role="content" class="row clearfix">
+	<section role="content">
 
-		<article class="eight columns">
+		<div class="container row clearfix">
 
-			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-				<h2><?php the_title(); ?></h2>
-
-				<?php //the_post(); ?>
-
-				<?php the_content(); ?>
-
-				<?php //comments_template( '', true ); ?>
-
-			<?php endwhile; endif; ?>
-
-		</article>
+			<article class="eight columns">
+	
+				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+	
+					<h2><?php the_title(); ?></h2>
+	
+					<?php //the_post(); ?>
+	
+					<?php the_content(); ?>
+	
+					<?php //comments_template( '', true ); ?>
+	
+				<?php endwhile; endif; ?>
+	
+			</article>
+	
+		</div>
 	
 	</section>
 

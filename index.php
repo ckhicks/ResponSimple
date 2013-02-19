@@ -7,23 +7,27 @@
 
 get_header(); ?>
 
-	<section role="content" id="" class="row clearfix">
+	<section role="content" id="">
 
-		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+		<div class="container row clearfix">
 
-		<article class="eight columns">
-			<header>
-				<h2><a href="" title="">title</a></h2>
-			</header>
-			<div>
-				<p>article</p>
-			</div>
-			<footer>
-				date, etc.
-			</footer>
-		</article>
+			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+	
+			<article class="eight columns">
+				<header>
+					<h2><a href="" title="">title</a></h2>
+				</header>
+				<div>
+					<p>article</p>
+				</div>
+				<footer>
+					date, etc.
+				</footer>
+			</article>
+	
+			<?php endwhile;  endif; ?>
 
-		<?php endwhile;  endif; ?>
+		</div>
 
 	</section>
 

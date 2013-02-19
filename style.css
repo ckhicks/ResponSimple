@@ -120,12 +120,12 @@ h1, h2, h3, h4, h5, h6 { font-weight: 600; color: #111; font-family: sans-serif;
 *
 */
 
-#header,
-#content,
-#footer {
+.container {
   margin: 0 5.555555555555555%; }
 
-.content { clear: both; }
+.four-one {
+	
+}
 
 h1, h2 {
   margin: 0.9230769230769231em 0 1.3846153846153846em; }
@@ -140,7 +140,7 @@ h3 {
   /* display: box; someday... */
   padding: 0 0.75em; }
 
-.ie body {
+/*.ie body {
   width: 40em;
   margin: 0 auto;
   font-size: 1.0625em; }
@@ -148,7 +148,7 @@ h3 {
 .ie h1 {
   font-size: 2.625em;
   line-height: 1.1428571428571428em;
-  margin: 1.1428571428571428em 0 0.5714285714285714em; }
+  margin: 1.1428571428571428em 0 0.5714285714285714em; }*/
 
 /* @end */
 
@@ -188,7 +188,7 @@ h3 {
   .columns.centered { float: none; margin: 0 auto; }
 
   /* Magic Gridlyness @ 8 col. */
-  .one { width: 12.5%; }  
+  .eight-one { width: 12.5%; }  
   .offset1 { margin-left: 12.5%; }
   .push1 { left: 12.5%; }
   .pull1 { right: 12.5%; }
@@ -240,9 +240,7 @@ h3 {
     /* Reset baseline grid to 16/16 = 1.0 */
     font-size: 1em;
   }
-  #header,
-  #content,
-  #footer {
+  .container {
     margin: 0 16.666666666666664%;
   }
 }
@@ -261,9 +259,7 @@ h3 {
     /* Reset baseline grid to 16/16 = 1.0 */
     font-size: 1em;
   }
-  #header,
-  #content,
-  #footer {
+  .container {
     margin: 0 27.77777777777778%;
   }
 }
@@ -290,7 +286,7 @@ h3 {
 @media screen and (min-width: 117em) {
 
   /* Magic Gridlyness @ 16 col. - coming soon */
-  /*.one { width: 6.25%; }  
+  /*.sixteen-one { width: 6.25%; }  
   .offset1 { margin-left: 6.25%; }
 
   .two { width: 12.5%; }
