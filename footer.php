@@ -2,17 +2,15 @@
 /**
  * @package WordPress
  * @subpackage ResponSimple
- * @since ResponSimple 1.7
+ * @since ResponSimple 1.8
  */
 ?>
 
-</div>
-
-<footer id="footer" class="row clearfix">
-	<div class="eight columns">
-		
-	</div>
-</footer>
+	<footer class="container row" role="footer">
+		<div class="four col">
+			<p>Theme: <a href="https://github.com/ckhicks/responsimple/" title="ResponSimple on GitHub">ResponSimple</a></p>
+		</div>
+	</footer>
 
 <?php wp_footer(); ?>
 

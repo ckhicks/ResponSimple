@@ -2,10 +2,12 @@
 /**
  * @package WordPress
  * @subpackage ResponSimple
- * @since ResponSimple 1.7
+ * @since ResponSimple 1.8
  */
 ?><!doctype html>
-<?php $root_base = get_stylesheet_directory(); $root = (''.$root_base.'/ua-parser/php'); define('__DIR__', $root); require(''.$root.'/UAParser.php'); $result = UA::parse(); if ($result->isMobile) { $ua = 'mobile'; } elseif ($result->isTablet) { $ua = 'tablet'; } else { $ua = 'other'; } ?>
+
+<!-- replace UA parser with Rogie's JS file? -->
+
 <!--[if lt IE 9]><html class="no-js ie" data-template-set="ResponSimple" dir="ltr" xmlns:og="opengraphprotocol.org/schema/" <?php language_attributes(); ?>><![endif]-->
 <!--[if gte IE 9]><!--><html data-template-set="ResponSimple" dir="ltr" xmlns:og="http://opengraphprotocol.org/schema/" <?php language_attributes(); ?>><!--<![endif]-->
 <head>
@@ -38,9 +40,7 @@
 
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <?php
-	if ( is_singular() && get_option( 'thread_comments' ) )
-	wp_enqueue_script( 'comment-reply' );
-	wp_enqueue_script( 'jquery' );
+	if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' );
 	wp_head();
 ?>
 
@@ -54,19 +54,10 @@
 <?php } ?>
 </head>
 <body <?php body_class(); ?>>
-  <!--[if lt IE 8]><p class="chromeframe">Your browser is too outdated and insecure to display this website. <a href="browsehappy.com/">Please upgrade to a different browser</a> or <a href="google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this secure content.</p><![endif]-->
 
-	<header role="header" id="header">
-		<div class="container row clearfix">
-			<hgroup class="four columns">
-				<h1 id="site-title"><a href="<?php echo esc_url( home_url('/') ); ?>" title="<?php echo esc_attr(get_bloginfo('name','display')); ?>" rel="home"><?php $headerimg = of_get_option('header_image'); if ('' == $headerimg) { bloginfo( 'name' ); } else { ?><img src="<?php echo of_get_option('header_image'); ?>" title="<?php echo esc_attr(get_bloginfo('name','display')); echo ' || '; echo esc_attr(get_bloginfo('description','display')); ?>" alt="<?php echo esc_attr(get_bloginfo('name','display')); echo ' || '; echo esc_attr(get_bloginfo('description','display')); ?>" /><?php } ?></a></h1>
-			</hgroup>
-		</div>
-		<div class="four columns">
-			<nav id="nav" role="navigation" class="menu">
-				<?php wp_nav_menu( array() ); ?>
-			</nav>
-		</div>
+	<header class="container row" role="header">
+		<h1 id="site-title" class="two-four col"><a href="<?php echo esc_url( home_url('/') ); ?>" title="<?php echo esc_attr(get_bloginfo('name','display')); ?>" rel="home"><?php echo esc_attr(get_bloginfo('name','display')); echo ' || '; echo esc_attr(get_bloginfo('description','display')); ?></a></h1>
+		<nav class="fwo-four col" role="navigation">
+			<?php wp_nav_menu( array() ); ?>
+		</nav>
 	</header>
-
-<div id="main">

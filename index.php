@@ -2,33 +2,20 @@
 /**
  * @package WordPress
  * @subpackage ResponSimple
- * @since ResponSimple 1.7
+ * @since ResponSimple 1.8
  */
 
 get_header(); ?>
 
-	<section role="content" id="">
-
-		<div class="container row clearfix">
-
-			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-	
-			<article class="eight columns">
-				<header>
-					<h2><a href="" title="">title</a></h2>
-				</header>
-				<div>
-					<p>article</p>
-				</div>
-				<footer>
-					date, etc.
-				</footer>
-			</article>
-	
-			<?php endwhile;  endif; ?>
-
-		</div>
-
-	</section>
+	<div class="container row">
+		<?php if ( have_posts() ) : ?>
+			<?php while ( have_posts() ) : the_post(); ?>
+			<?php get_template_part( 'content' ); //, get_post_format() ?>
+			<?php endwhile; ?>
+			<?php paging_nav(); ?>
+		<?php else : ?>
+			<?php get_template_part( 'content', 'none' ); ?>
+		<?php endif; ?>
+	</div>
 
 <?php get_footer(); ?>

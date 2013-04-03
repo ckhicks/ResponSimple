@@ -2,33 +2,23 @@
 /**
  * @package WordPress
  * @subpackage ResponSimple
- * @since ResponSimple 1.7
+ * @since ResponSimple 1.8
  */
 
 get_header(); ?>
 
-	<section role="content">
-
-		<div class="container row clearfix">
-
-			<article class="eight columns">
-	
-				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-	
-					<h2><?php the_title(); ?></h2>
-	
-					<?php //the_post(); ?>
-	
-					<?php the_content(); ?>
-	
-					<?php //comments_template( '', true ); ?>
-	
-				<?php endwhile; endif; ?>
-	
-			</article>
-	
+	<div class="container row">
+		<div class="two-three col" role="main">
+			<?php while (have_posts()) : the_post(); ?>
+				<?php get_template_part( 'content' ); ?>
+				<?php paging_nav(); ?>
+				<?php comments_template(); ?>
+			<?php endwhile; ?>
 		</div>
-	
-	</section>
+		
+		<aside class="one-three col">
+			<?php get_sidebar(); ?>
+		</aside>
+	</div>
 
 <?php get_footer(); ?>
