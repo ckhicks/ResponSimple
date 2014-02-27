@@ -1,0 +1,69 @@
+//----------------------------------*\
+// MEDIA QUERIES
+// The idea here is to have something you can use semantically. ("Anything netbook and up.")
+//----------------------------------*/
+
+@mixin mq($size, $direction: up)
+	
+	// tiny
+	@if $size == tiny
+		@if $direction == down
+			@media screen and (max-width: em(479))
+				@content
+		@else
+			@media screen and (min-width: em(480))
+				@content
+
+	// small
+	@if $size == sm
+		@if $direction == down
+			@media screen and (max-width: em(599))
+				@content
+		@else
+			@media screen and (min-width: em(600))
+				@content
+
+	// medium
+	@if $size == med
+		@if $direction == down
+			@media screen and (max-width: em(767))
+				@content
+		@else
+			@media screen and (min-width: em(768))
+				@content
+
+	// large
+	@if $size == large
+		@if $direction == down
+			@media screen and (max-width: em(959))
+				@content
+		@else
+			@media screen and (min-width: em(960))
+				@content
+
+	// huge
+	@if $size == huge
+		@if $direction == down
+			@media screen and (max-width: em(1139))
+				@content
+		@else
+			@media screen and (min-width: em(1140))
+				@content
+
+	// gargantuan
+	@if $size == gargantuan
+		@if $direction == down
+			@media screen and (max-width: em(1399))
+				@content
+		@else
+			@media screen and (min-width: em(1400))
+				@content
+
+	// colossal
+	@if $size == colossal
+		@if $direction == down
+			@media screen and (max-width: em(1919))
+				@content
+		@else
+			@media screen and (min-width: em(1920))
+				@content
