@@ -36,11 +36,11 @@
 </head>
 <body <?php body_class(); ?>>
 
-	<header class="row site-header" role="header">
+	<header class="site-header" role="header">
 		
-		<h1 class="col site-title"><?php the_title(); ?></h1>
+		<h1 class="site-title"><?php the_title(); ?></h1>
 			
-		<nav roll="navigation" class="col main-nav">
+		<nav roll="navigation" class="main-nav">
 			<?php wp_nav_menu( array( 'container' => '', 'menu_id' => 'menu' ) ); ?>
 		</nav>
 

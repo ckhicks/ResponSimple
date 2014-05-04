@@ -6,10 +6,9 @@
  */
 ?>
 
-	<footer id="site-footer" class="row" role="footer">
+	<footer id="site-footer" role="footer">
 		<div class="container">
-			<p class="four col fpage"><a href="http://ckhicks.com/category/articles/" title="">View All Articles &rarr;</a></p>
-			<p class="four col">Copyright <?php echo date('Y'); ?> <?php bloginfo('name'); ?> All Rights Reserved.</p>
+			<p class="">Copyright <?php echo date('Y'); ?> <?php bloginfo('name'); ?> All Rights Reserved.</p>
 		</div>
 	</footer>
 

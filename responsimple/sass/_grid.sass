@@ -1,12 +1,18 @@
 // ResponSimple
-%col
-	+mq(sm)
-		float: left
+=col($width, $float: false)
+	width: $width
+	@if $float
+		float: $float
 
-%row
+.row
 	width: 100%
 	margin: 0 auto
 	+cf
+
+.container
+	max-width: em(1280)
+	margin: 0 auto
+	padding: 0 5%
 
 // Main 100% Column
 $one: 100%
