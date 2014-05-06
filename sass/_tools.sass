@@ -53,6 +53,11 @@
 	-o-transition: all $speed
 	transition: all $speed
 
+=bg-size($type)
+  background-repeat: no-repeat
+  background-size: $type
+  -ms-behavior: url(images/backgroundsize.htc)
+
 =gradient($gd1, $gd2)
 	background-color: $gd1
 	background-image: -webkit-gradient(linear, left top, left bottom, from($gd1), to($gd2))
@@ -74,3 +79,24 @@
 	-ms-border-radius: $rd
 	-o-border-radius: $rd
 	border-radius: $rd
+
+=transform-translate($amount1, $amount2)
+  -webkit-transform: translate($amount1, $amount2)
+  -moz-transform: translate($amount1, $amount2)
+  -ms-transform: translate($amount1, $amount2)
+  -o-transform: translate($amount1, $amount2)
+  transform: translate($amount1, $amount2)
+
+=transform-scale($amount)
+  -webkit-transform: scale($amount)
+  -moz-transform: scale($amount)
+  -ms-transform: scale($amount)
+  -o-transform: scale($amount)
+  transform: scale($amount)
+
+=transform-rotate($amount)
+  -webkit-transform: rotate($amount)
+  -moz-transform: rotate($amount)
+  -ms-transform: rotate($amount)
+  -o-transform: rotate($amount)
+  transform: rotate($amount)
