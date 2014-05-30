@@ -46,6 +46,7 @@
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str})
 	zoom: 1
 
+// Simple Transitions
 =transition($speed)
 	-webkit-transition: all $speed
 	-moz-transition: all $speed
@@ -53,19 +54,29 @@
 	-o-transition: all $speed
 	transition: all $speed
 
-=bg-size($type)
-  background-repeat: no-repeat
-  background-size: $type
-  -ms-behavior: url(images/backgroundsize.htc)
+// Simple Transforms
+=transform-translate($amount1, $amount2)
+	-webkit-transform: translate($amount1, $amount2)
+	-moz-transform: translate($amount1, $amount2)
+	-ms-transform: translate($amount1, $amount2)
+	-o-transform: translate($amount1, $amount2)
+	transform: translate($amount1, $amount2)
 
-=gradient($gd1, $gd2)
-	background-color: $gd1
-	background-image: -webkit-gradient(linear, left top, left bottom, from($gd1), to($gd2))
-	background-image: -webkit-linear-gradient(top, $gd1, $gd2)
-	background-image: -moz-linear-gradient(top, $gd1, $gd2)
-	background-image: -o-linear-gradient(top, $gd1, $gd2)
-	background-image: linear-gradient(to bottom, $gd1, $gd2)
+=transform-scale($amount)
+	-webkit-transform: scale($amount)
+	-moz-transform: scale($amount)
+	-ms-transform: scale($amount)
+	-o-transform: scale($amount)
+	transform: scale($amount)
 
+=transform-rotate($amount)
+	-webkit-transform: rotate($amount)
+	-moz-transform: rotate($amount)
+	-ms-transform: rotate($amount)
+	-o-transform: rotate($amount)
+	transform: rotate($amount)
+
+// Box Shadows
 =box-shadow($bs1, $bs2, $bs3, $bs4, $bs5)
 	-webkit-box-shadow: $bs1 $bs2 $bs3 $bs4 $bs5
 	-moz-box-shadow: $bs1 $bs2 $bs3 $bs4 $bs5
@@ -73,6 +84,7 @@
 	-o-box-shadow: $bs1 $bs2 $bs3 $bs4 $bs5
 	box-shadow: $bs1 $bs2 $bs3 $bs4 $bs5
 
+// Border Radius
 =border-radius($rd)
 	-webkit-border-radius: $rd
 	-moz-border-radius: $rd
@@ -80,23 +92,36 @@
 	-o-border-radius: $rd
 	border-radius: $rd
 
-=transform-translate($amount1, $amount2)
-  -webkit-transform: translate($amount1, $amount2)
-  -moz-transform: translate($amount1, $amount2)
-  -ms-transform: translate($amount1, $amount2)
-  -o-transform: translate($amount1, $amount2)
-  transform: translate($amount1, $amount2)
+// Opacity
+=opacity($alpha)
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$alpha*100)"
+	filter: alpha(opacity = $alpha * 100)
+	-webkit-opacity: $alpha
+	-moz-opacity: $alpha
+	-khtml-opacity: $alpha
+	opacity: $alpha
 
-=transform-scale($amount)
-  -webkit-transform: scale($amount)
-  -moz-transform: scale($amount)
-  -ms-transform: scale($amount)
-  -o-transform: scale($amount)
-  transform: scale($amount)
+// Background Size - requires htc for old IE
+=bg-size($type)
+	background-repeat: no-repeat
+	background-size: $type
+	-ms-behavior: url(images/backgroundsize.htc)
 
-=transform-rotate($amount)
-  -webkit-transform: rotate($amount)
-  -moz-transform: rotate($amount)
-  -ms-transform: rotate($amount)
-  -o-transform: rotate($amount)
-  transform: rotate($amount)
+// Font Smoothing
+=font-smoothing
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+	// -webkit-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.075)
+	// -moz-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.075)
+	// -ms-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.075)
+	// -o-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.075)
+	// text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.075)
+
+// CSS Gradient - on hold due to changing webkit prefix
+// =gradient($gd1, $gd2)
+// 	background-color: $gd1
+// 	background-image: -webkit-gradient(linear, left top, left bottom, from($gd1), to($gd2))
+// 	background-image: -webkit-linear-gradient(top, $gd1, $gd2)
+// 	background-image: -moz-linear-gradient(top, $gd1, $gd2)
+// 	background-image: -o-linear-gradient(top, $gd1, $gd2)
+// 	background-image: linear-gradient(to bottom, $gd1, $gd2)

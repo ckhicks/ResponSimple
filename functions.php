@@ -6,75 +6,6 @@
  */
 
 //
-//  Theme Stuff
-//
-	//add_editor_style( 'editor-style.css' );
-	add_theme_support( 'automatic-feed-links' );
-	//add_theme_support( 'structured-post-formats', array( 'link', 'video' ) );
-	add_theme_support( 'post-formats', array( 'aside', 'audio', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video' ) );
-	add_theme_support( 'post-thumbnails' );
-
-//
-//  Titles
-//
-	function responsimple_wp_title( $title, $sep ) {
-		global $paged, $page;
-
-		if ( is_feed() )
-			return $title;
-
-//		Add the site name.
-		$title .= get_bloginfo( 'name' );
-
-//		Add the site description for the home/front page.
-		$site_description = get_bloginfo( 'description', 'display' );
-		if ( $site_description && ( is_home() || is_front_page() ) )
-			$title = "$title";
-
-		if ( is_single() )
-			$title = get_the_title() . ' by @ckhicks';
-
-//		 Add a page number if necessary.
-		if ( $paged >= 2 || $page >= 2 )
-			$title = "$title $sep " . sprintf( __( 'Page %s', 'responsimple' ), max( $paged, $page ) );
-//FIX
-//		if (function_exists('is_tag') && is_tag()) {
-//		   single_tag_title("Tag Archive for &quot;"); echo '&quot; - '; }
-//		elseif (is_archive()) {
-//		   wp_title(''); echo ' Archive - '; }
-//		elseif (is_search()) {
-//		   echo 'Search for &quot;'.wp_specialchars($s).'&quot; - '; }
-//		elseif (!(is_404()) && (is_single()) || (is_page())) {
-//		   wp_title(''); echo ' - '; }
-//		elseif (is_404()) {
-//		   echo 'Not Found - '; }
-//		if (is_home()) {
-//		   bloginfo('name'); echo ' - '; bloginfo('description'); }
-//		else {
-//		    bloginfo('name'); }
-//		if ($paged>1) {
-//		   echo ' - page '. $paged; }
-
-		return $title;
-	}
-	add_filter( 'wp_title', 'responsimple_wp_title', 10, 2 );
-
-//
-//  Description/Excerpt
-//
-
-	function responsimple_wp_desc() {
-		global $paged, $page;
-		$site_description = get_bloginfo( 'description', 'display' );
-		$single_desc = get_the_excerpt();
-		if ( is_home() || is_front_page() )
-			echo $site_description;
-		if ( is_single() )
-			echo $single_desc;
-		return $desc;
-	}
-	
-//
 //  Shortcodes
 //
 	// [WayOfTheFuture™]
@@ -83,23 +14,6 @@
 //  Menus
 //
 	register_nav_menu( 'header', 'Header Menu' );
-	
-//
-//  Widgets
-//
-	function responsimple_widgets_init() {
-
-		register_sidebar( array(
-			'name' => __( 'Sidebar', 'responsimple' ),
-			'id' => 'sidebar',
-			'before_widget' => '<div id="%1$s" class="widget %2$s">',
-			'after_widget' => "</div>",
-			'before_title' => '<h4 class="widget-title">',
-			'after_title' => '</h4>',
-		) );
-				
-	}
-	add_action( 'widgets_init', 'responsimple_widgets_init' );
 
 //
 //  Post/Page Navigation
