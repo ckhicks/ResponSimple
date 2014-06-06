@@ -1,11 +1,11 @@
-//----------------------------------*\
+//----------------------------------
 // FONTS
-//----------------------------------*/
+//----------------------------------
 
 // Font Smoothing
 =font-smoothing
 	-webkit-font-smoothing: antialiased
-	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004)
+	-moz-osx-font-smoothing: grayscale
 
 // Font mixins to be used on the site. This is handy especially when utilizing third-party services
 // Generic Font Stack
@@ -14,9 +14,9 @@
 	font-weight: normal
 	+font-smoothing
 
-//----------------------------------*\
+//----------------------------------
 // UTILITIES
-//----------------------------------*/
+//----------------------------------
 
 // Convert pixels into em units
 @function em($px, $context: 16)
@@ -29,7 +29,7 @@
 =cf
 	zoom: 1
 	&:before,
-	&:after 
+	&:after
 		content: "\0020"
 		display: block
 		height: 0
@@ -106,16 +106,6 @@
 	background-repeat: no-repeat
 	background-size: $type
 	-ms-behavior: url(images/backgroundsize.htc)
-
-// Font Smoothing
-=font-smoothing
-	-webkit-font-smoothing: antialiased
-	-moz-osx-font-smoothing: grayscale
-	// -webkit-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.075)
-	// -moz-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.075)
-	// -ms-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.075)
-	// -o-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.075)
-	// text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.075)
 
 // CSS Gradient - on hold due to changing webkit prefix
 // =gradient($gd1, $gd2)
