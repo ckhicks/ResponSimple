@@ -25,4 +25,4 @@
 //
 //  Post/Page Tools
 //
-	include('functions/post-page.php');
+	// include('functions/post-page.php');

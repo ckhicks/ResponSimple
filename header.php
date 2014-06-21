@@ -5,13 +5,14 @@
  * @since ResponSimple 2.0.1
  */
 ?><!doctype html>
-<!--[if lt IE 10]><html class="no-js ie" data-template-set="ResponSimple" dir="ltr" xmlns:og="opengraphprotocol.org/schema/" <?php language_attributes(); ?>><![endif]-->
-<!--[if gte IE 10]><!--><html class="no-js" data-template-set="ResponSimple" dir="ltr" xmlns:og="http://opengraphprotocol.org/schema/" <?php language_attributes(); ?>><!--<![endif]-->
-<head profile="http://gmpg.org/xfn/11"> 
+<!--[if lt IE 10]><html class="no-js ie" dir="ltr" xmlns:og="opengraphprotocol.org/schema/" <?php language_attributes(); ?>><![endif]-->
+<!--[if gte IE 10]><!--><html class="no-js" dir="ltr" xmlns:og="http://opengraphprotocol.org/schema/" <?php language_attributes(); ?>><!--<![endif]-->
+<head profile="http://gmpg.org/xfn/11">
+
+	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
 
-	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-width=1.0" />
 	<meta name="title" content="<?php wp_title( '|', true, 'right' ); ?>" />
 	<meta name="description" content="" />
@@ -23,7 +24,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<![endif]-->
 	<!--[if lt IE 8]>
-		<script src="<?php bloginfo( 'template_url' ); ?>/js/html5shiv.js"></script>
+		<script src="<?php echo get_template_directory_uri(); ?>/js/html5shiv.js"></script>
 	<![endif]-->
 
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" />
@@ -37,9 +38,9 @@
 <body <?php body_class(); ?>>
 
 	<header class="site-header" role="header">
-		
+
 		<h1 class="site-title"><?php the_title(); ?></h1>
-			
+
 		<nav roll="navigation" class="main-nav">
 			<?php wp_nav_menu( array( 'container' => '', 'menu_id' => 'menu' ) ); ?>
 		</nav>

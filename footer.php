@@ -12,7 +12,6 @@
 		</div>
 	</footer>
 
-	<?php if (!is_user_logged_in()) echo '<script src="http://code.jquery.com/jquery.min.js"></script>'; ?>
 	<?php wp_footer(); ?>
 
 	<script>
