@@ -13,7 +13,7 @@
 
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
 
-	<meta name="viewport" content="width=device-width, initial-width=1.0" />
+	<meta name="viewport" content="width=device-width, initial-width=1 minimal-ui" />
 	<meta name="title" content="<?php wp_title( '|', true, 'right' ); ?>" />
 	<meta name="description" content="" />
 	<meta name="author" content="<?php echo bloginfo( 'title' ) ?>" />
@@ -41,7 +41,7 @@
 
 		<h1 class="site-title"><?php the_title(); ?></h1>
 
-		<nav roll="navigation" class="main-nav">
+		<nav class="main-nav" role="navigation">
 			<?php wp_nav_menu( array( 'container' => '', 'menu_id' => 'menu' ) ); ?>
 		</nav>
 

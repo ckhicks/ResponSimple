@@ -1,9 +1,6 @@
-ResponSimple_v17.esproj
 .DS_Store
-.esproj
-ResponSimple_v17/ResponSimple_v17.esproj/user.ckhicks.espressostorage
-
+*.esproj
 *.espressostorage
 
 .gitignore
-WordPress-v2/.sass-cache
+.sass-cache
