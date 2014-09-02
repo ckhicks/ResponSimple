@@ -4,18 +4,17 @@
 	@if $float
 		float: $float
 
+// Rows hold and clear any number of columns
 .row
 	width: 100%
 	margin: 0 auto
 	+cf
 
+// Max-Width Container (optional)
 .container
 	max-width: em(1280)
 	margin: 0 auto
 	padding: 0 5%
-
-// Main 100% Column
-$one: 100%
 
 // Magic Gridlyness @ 3-col
 $one-three: 33.33334%
