@@ -6,6 +6,21 @@
  */
 
 //
+//  Theme Updater
+//
+	include('functions/github-updater.php');
+	function rs_gitup_updater() {
+		if ( !function_exists( 'gitup_updater_register' ) )
+			return false;
+		gitup_updater_register( array(
+			'owner'	=> 'ckhicks',
+			'repo'	=> 'responsimple',
+			'slug'	=> 'functions/github-updater.php'
+		) );
+	}
+	rs_gitup_updater();
+
+//
 //  Proper WP jQuery - WayOfTheFuture™
 //  This allows loading jQuery into the header or footer, plus controlling which version is used, if needed.
 //
