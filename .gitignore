@@ -1,6 +1,6 @@
 .DS_Store
 *.esproj
 *.espressostorage
-
 .gitignore
 .sass-cache
+node_modules

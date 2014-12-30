@@ -5,8 +5,8 @@
  * @since ResponSimple 2.0.1
  */
 ?><!doctype html>
-<!--[if lt IE 10]><html class="no-js ie" dir="ltr" xmlns:og="opengraphprotocol.org/schema/" <?php language_attributes(); ?>><![endif]-->
-<!--[if gte IE 10]><!--><html class="no-js" dir="ltr" xmlns:og="http://opengraphprotocol.org/schema/" <?php language_attributes(); ?>><!--<![endif]-->
+<!--[if lt IE 11]><html class="no-js ie" <?php language_attributes(); ?>><![endif]-->
+<!--[if gte IE 11]><!--><html class="no-js" <?php language_attributes(); ?>><!--<![endif]-->
 <head profile="http://gmpg.org/xfn/11">
 
 	<meta charset="<?php echo get_bloginfo( 'charset' ); ?>" />

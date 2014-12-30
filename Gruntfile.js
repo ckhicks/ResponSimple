@@ -4,10 +4,9 @@ module.exports = function(grunt) {
 
     // Project settings
     project: {
-      app: 'app',
-      dir: '/',
-      assets: '<%= project.dir %>/assets',
-      sass: '<%= project.assets %>/sass'
+      dir: '',
+      assets: 'assets',
+      sass: 'sass'
     },
 
     // Start watching SASS
@@ -22,8 +21,8 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: '<%= project.sass %>',
-          src: ['*.{scss,sass}'],
-          dest: '<%= project.dir %>/',
+          src: ['*.{sass,scss}'],
+          dest: '<%= project.dir %>',
           ext: '.css'
         }]
       },
@@ -35,9 +34,9 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: '<%= project.sass %>',
-          src: ['*.{scss,sass}'],
+          src: ['*.{sass,scss}'],
           dest: '<%= project.sass %>/css/',
-          ext: '.css'
+          ext: '*.css'
         }]
       }
     },
@@ -60,7 +59,7 @@ module.exports = function(grunt) {
     cmq: {
       your_target: {
         files: {
-          '<%= project.dir %>/': ['<%= project.assets %>/css-source/prefix/*.css']
+          '<%= project.dir %>': ['<%= project.assets %>/css-source/prefix/*.css']
         }
       }
     },
@@ -68,20 +67,20 @@ module.exports = function(grunt) {
     // Set up watch commands for library
     watch: {
       sass: {
-        files: '**/*.scss',
+        files: '<%= project.sass %>/*.{sass,scss}',
         tasks: ['sass:dev'],
         options: {
-          livereload: true,
+          livereload: true
         }
       }
     },
 
     commit: {
       sass: {
-        files: '**/*.scss',
-        tasks: ['sass:dev'],
+        files: '<%= project.sass %>/*.{sass,scss}',
+        tasks: ['sass:dist'],
         options: {
-          livereload: true,
+          livereload: true
         }
       },
       prefix: {

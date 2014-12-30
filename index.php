@@ -9,18 +9,21 @@ get_header(); ?>
 	<?php if (is_search()) { ?>
 	<header class="archive-header">
 		<h1 class="archive-title"><?php printf( __( 'Search Results for "%s"', 'responsimple' ), get_search_query( '', false ) ); ?></h1>
-		<p><a href="http://ckhicks.com/search/"><em>Need to search again?</em></a></p>
+		<p><em>Need to search again?</em></p>
+		<?php get_search_form(); ?>
 	</header>
 	<hr />
 	<?php } ?>
 
-	<?php if ( have_posts() ) : ?>
-		<?php while ( have_posts() ) : the_post(); ?>
-		<?php the_excerpt(); //get_template_part( 'content' ); ?>
-		<?php endwhile; ?>
-		<?php paging_nav(); ?>
-	<?php else : ?>
-		<?php get_template_part( 'content', 'none' ); ?>
-	<?php endif; ?>
+	<?php
+		if ( have_posts() ) :
+			while ( have_posts() ) : the_post();
+				get_template_part( 'content' );
+			endwhile;
+		paging_nav();
+		else :
+			get_template_part( 'content', 'none' );
+		endif;
+	?>
 
 <?php get_footer(); ?>
